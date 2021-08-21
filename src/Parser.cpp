@@ -1,9 +1,9 @@
 #include "Parser.hpp"
 
-Parser::Parser(std::vector<Token> tokens):
-    tokens{tokens}, nextToken{tokens.begin()}, ast{ASTNode{ASTNodeType::Program, ""}}
+Parser::Parser(const std::vector<Token>& tokens):
+    tokens{tokens}, nextToken{this->tokens.begin()}, ast{ASTNode{ASTNodeType::Program, ""}}
 {
-    ast[0].addChild(parseTerm());
+    ast.addChild(parseTerm());
 }
 
 Token Parser::consume()

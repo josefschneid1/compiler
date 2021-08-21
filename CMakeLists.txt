@@ -5,8 +5,11 @@ project(compiler LANGUAGES CXX)
 find_package(Catch2 REQUIRED)
 
 add_library(core OBJECT
+		include/Lexer.hpp
         src/Lexer.cpp
+		include/Parser.hpp
         src/Parser.cpp
+		include/Tree.hpp
 )
 
 target_include_directories(core
@@ -37,9 +40,10 @@ add_executable(comptest
     test/test_lexer.cpp
     test/test_tree.cpp
     test/test_parser.cpp
+	test/test_main.cpp
 )
 
-target_link_libraries(comptest core Catch2::Catch2WithMain)
+target_link_libraries(comptest core Catch2::Catch2)
 
 set_target_properties(comptest
     PROPERTIES
@@ -50,8 +54,3 @@ set_target_properties(comptest
 
 include(Catch)
 catch_discover_tests(comptest)
-
-#find_package(opencv REQUIRED)
-#find_package(boost REQUIRED)
-#target_include_directories(main PUBLIC ${OpenCV_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
-#target_link_libraries(main ${OpenCV_LIBS} ${Boost_LIBRARIES})

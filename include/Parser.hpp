@@ -28,7 +28,7 @@ class Parser
     std::vector<Token> tokens;
     std::vector<Token>::iterator nextToken;
 public:
-    Parser(std::vector<Token> tokens);
+    Parser(const std::vector<Token>& tokens);
     std::unique_ptr<Tree<ASTNode>> parseTerm();
     std::unique_ptr<Tree<ASTNode>> parseProduct();
     Token consume();

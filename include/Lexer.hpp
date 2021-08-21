@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <stdexcept>
 
 class UnkownTokenError : public std::runtime_error
 {
