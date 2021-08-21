@@ -1,5 +1,0 @@
-if(EXISTS "/Users/josefschneid/Desktop/Compiler/build/comptest_tests-b12d07c.cmake")
-  include("/Users/josefschneid/Desktop/Compiler/build/comptest_tests-b12d07c.cmake")
-else()
-  add_test(comptest_NOT_BUILT-b12d07c comptest_NOT_BUILT-b12d07c)
-endif()

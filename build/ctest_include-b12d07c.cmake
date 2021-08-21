@@ -1,5 +1,0 @@
-if(EXISTS "/Users/josefschneid/Desktop/Compiler/build/ctest_tests-b12d07c.cmake")
-  include("/Users/josefschneid/Desktop/Compiler/build/ctest_tests-b12d07c.cmake")
-else()
-  add_test(ctest_NOT_BUILT-b12d07c ctest_NOT_BUILT-b12d07c)
-endif()
