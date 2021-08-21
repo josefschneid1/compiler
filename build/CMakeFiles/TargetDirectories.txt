@@ -1,0 +1,6 @@
+/Users/josefschneid/Desktop/Compiler/build/CMakeFiles/rebuild_cache.dir
+/Users/josefschneid/Desktop/Compiler/build/CMakeFiles/core.dir
+/Users/josefschneid/Desktop/Compiler/build/CMakeFiles/edit_cache.dir
+/Users/josefschneid/Desktop/Compiler/build/CMakeFiles/main.dir
+/Users/josefschneid/Desktop/Compiler/build/CMakeFiles/test.dir
+/Users/josefschneid/Desktop/Compiler/build/CMakeFiles/comptest.dir

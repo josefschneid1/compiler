@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/Users/josefschneid/Desktop/Compiler/build",
+  "command": "/usr/bin/clang++  -I/Users/josefschneid/Desktop/Compiler/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -mmacosx-version-min=10.15 -std=c++2a -o CMakeFiles/core.dir/src/Lexer.cpp.o -c /Users/josefschneid/Desktop/Compiler/src/Lexer.cpp",
+  "file": "/Users/josefschneid/Desktop/Compiler/src/Lexer.cpp"
+},
+{
+  "directory": "/Users/josefschneid/Desktop/Compiler/build",
+  "command": "/usr/bin/clang++  -I/Users/josefschneid/Desktop/Compiler/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -mmacosx-version-min=10.15 -std=c++2a -o CMakeFiles/core.dir/src/Parser.cpp.o -c /Users/josefschneid/Desktop/Compiler/src/Parser.cpp",
+  "file": "/Users/josefschneid/Desktop/Compiler/src/Parser.cpp"
+},
+{
+  "directory": "/Users/josefschneid/Desktop/Compiler/build",
+  "command": "/usr/bin/clang++  -I/Users/josefschneid/Desktop/Compiler/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -mmacosx-version-min=10.15 -std=c++2a -o CMakeFiles/main.dir/src/main.cpp.o -c /Users/josefschneid/Desktop/Compiler/src/main.cpp",
+  "file": "/Users/josefschneid/Desktop/Compiler/src/main.cpp"
+},
+{
+  "directory": "/Users/josefschneid/Desktop/Compiler/build",
+  "command": "/usr/bin/clang++  -I/Users/josefschneid/Desktop/Compiler/include -isystem /Users/josefschneid/Desktop/vcpkg/installed/x64-osx/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -mmacosx-version-min=10.15 -std=c++2a -o CMakeFiles/comptest.dir/test/test_lexer.cpp.o -c /Users/josefschneid/Desktop/Compiler/test/test_lexer.cpp",
+  "file": "/Users/josefschneid/Desktop/Compiler/test/test_lexer.cpp"
+},
+{
+  "directory": "/Users/josefschneid/Desktop/Compiler/build",
+  "command": "/usr/bin/clang++  -I/Users/josefschneid/Desktop/Compiler/include -isystem /Users/josefschneid/Desktop/vcpkg/installed/x64-osx/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -mmacosx-version-min=10.15 -std=c++2a -o CMakeFiles/comptest.dir/test/test_tree.cpp.o -c /Users/josefschneid/Desktop/Compiler/test/test_tree.cpp",
+  "file": "/Users/josefschneid/Desktop/Compiler/test/test_tree.cpp"
+},
+{
+  "directory": "/Users/josefschneid/Desktop/Compiler/build",
+  "command": "/usr/bin/clang++  -I/Users/josefschneid/Desktop/Compiler/include -isystem /Users/josefschneid/Desktop/vcpkg/installed/x64-osx/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -mmacosx-version-min=10.15 -std=c++2a -o CMakeFiles/comptest.dir/test/test_parser.cpp.o -c /Users/josefschneid/Desktop/Compiler/test/test_parser.cpp",
+  "file": "/Users/josefschneid/Desktop/Compiler/test/test_parser.cpp"
+}
+]

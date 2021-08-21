@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/ctest.dir/test/test.cpp.o CMakeFiles/core.dir/src/Lexer.cpp.o -o ctest  /Users/josefschneid/Desktop/vcpkg/installed/x64-osx/debug/lib/manual-link/libCatch2WithMain.a 
