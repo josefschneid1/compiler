@@ -32,5 +32,6 @@ public:
     std::unique_ptr<Tree<ASTNode>> parseTerm();
     std::unique_ptr<Tree<ASTNode>> parseProduct();
     Token consume();
+    Token consume(TokenType type);
     const Tree<ASTNode>& getAst() const;
 };
