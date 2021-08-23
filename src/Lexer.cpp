@@ -63,7 +63,7 @@ Lexer::Lexer(const std::string& input)
             throw UnkownTokenError{""};
         }
     }
-    tokens.push_back(Token{TokenType::END_Program, ""});
+    //tokens.push_back(Token{TokenType::END_Program, ""});
 }
 
 const std::vector<Token>& Lexer::getTokens()

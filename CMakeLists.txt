@@ -4,6 +4,10 @@ project(compiler LANGUAGES CXX)
 
 find_package(Catch2 REQUIRED)
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 add_library(core OBJECT
 		include/Lexer.hpp
         src/Lexer.cpp
@@ -17,22 +21,8 @@ target_include_directories(core
     include/
 )
 
-set_target_properties(core
-    PROPERTIES
-        CXX_STANDARD 20
-        CXX_EXTENSIONS OFF
-        CXX_STANDARD_REQUIRED TRUE
-)
-
 add_executable(main src/main.cpp)
 target_link_libraries(main core)
-
-set_target_properties(main
-    PROPERTIES
-        CXX_STANDARD 20
-        CXX_EXTENSIONS OFF
-        CXX_STANDARD_REQUIRED TRUE
-)
 
 enable_testing()
 
@@ -44,13 +34,6 @@ add_executable(comptest
 )
 
 target_link_libraries(comptest core Catch2::Catch2)
-
-set_target_properties(comptest
-    PROPERTIES
-        CXX_STANDARD 20
-        CXX_EXTENSIONS OFF
-        CXX_STANDARD_REQUIRED TRUE
-)
 
 include(Catch)
 catch_discover_tests(comptest)

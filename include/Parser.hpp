@@ -27,11 +27,15 @@ class Parser
     Tree<ASTNode> ast;
     std::vector<Token> tokens;
     std::vector<Token>::iterator nextToken;
-public:
-    Parser(const std::vector<Token>& tokens);
+
     std::unique_ptr<Tree<ASTNode>> parseTerm();
     std::unique_ptr<Tree<ASTNode>> parseProduct();
     Token consume();
     Token consume(TokenType type);
+
+    bool hasNext() const;
+
+public:
+    Parser(const std::vector<Token>& tokens);
     const Tree<ASTNode>& getAst() const;
 };

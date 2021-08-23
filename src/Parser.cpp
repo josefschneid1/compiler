@@ -22,36 +22,44 @@ Token Parser::consume(TokenType type)
     return t;
 }
 
+bool Parser::hasNext() const
+{
+    return nextToken != tokens.end();
+}
+
 std::unique_ptr<Tree<ASTNode>> Parser::parseTerm()
 {
     auto leftOperand = parseProduct();
 
-    switch(nextToken->type)
+    while(hasNext())
     {
-        case TokenType::ADD:
+        switch (nextToken->type)
         {
-            consume();
-            auto rightOperand = parseTerm();
-            auto astnode = std::make_unique<Tree<ASTNode>>(ASTNode{ASTNodeType::Addition, ""});
-            astnode->addChild(std::move(leftOperand));
-            astnode->addChild(std::move(rightOperand));
-            return astnode;
+            case TokenType::ADD:
+            {   
+                consume();
+                auto rightOperand = parseProduct();
+                auto astnode = std::make_unique<Tree<ASTNode>>(ASTNode{ASTNodeType::Addition, ""});
+                astnode->addChild(std::move(leftOperand));
+                astnode->addChild(std::move(rightOperand));
+                leftOperand = std::move(astnode);
+                break;
+            }
+
+            case TokenType::SUB:
+            {
+                consume();
+                auto rightOperand = parseProduct();
+                auto astnode = std::make_unique<Tree<ASTNode>>(ASTNode{ASTNodeType::Subtraction, ""});
+                astnode->addChild(std::move(leftOperand));
+                astnode->addChild(std::move(rightOperand));
+                leftOperand = std::move(astnode);
+                break;                
+            }
+            default:
+                throw UnexpectedToken("");
         }
-
-        case TokenType::SUB:
-        {
-            consume();
-            auto rightOperand = parseTerm();
-            auto astnode = std::make_unique<Tree<ASTNode>>(ASTNode{ ASTNodeType::Subtraction, "" });
-            astnode->addChild(std::move(leftOperand));
-            astnode->addChild(std::move(rightOperand));
-            return astnode;
-        }
-
-        default:
-        break;
-    }
-
+    } 
     return leftOperand;
 }
 
