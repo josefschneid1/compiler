@@ -1,4 +1,3 @@
-import lexer;
 
 int main()
 {

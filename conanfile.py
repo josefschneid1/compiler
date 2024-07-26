@@ -10,11 +10,12 @@ class BasicConanfile(ConanFile):
 
     settings = "os", "compiler", "build_type", "arch"
     generators = "CMakeToolchain", "CMakeDeps"
-    
+
     def layout(self):
         cmake_layout(self)
 
     def build(self):
+        self.run("pip install -r {}/requirements.txt".format(self.source_folder))
         cmake = CMake(self)
         cmake.configure()
         cmake.build()
