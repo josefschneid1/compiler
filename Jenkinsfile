@@ -1,17 +1,13 @@
 pipeline {
-    agent {
-        docker{
-
-            filename 'Dockerfile'
-        }
-    }
+    agent any
 
     stages {
 
-        stage('Build') {
-            steps {
-                sh 'gcc --version'
-            }
+        stage('Build Image') {
+            sh 'docker build . -t image'
+        }
+        stage('Build Application') {
+            sh 'docker run -v .:/src image sh -c "conan build ."'
         }
         stage('Test') {
             steps {
@@ -22,6 +18,6 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
-        }
+        } 
     }
 }
