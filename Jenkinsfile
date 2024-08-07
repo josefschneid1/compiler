@@ -17,7 +17,7 @@ pipeline {
             steps
             {
              sh 'ls -lah'
-             sh 'docker run -v .:/src image sh -c "ls -lah"'
+             sh 'docker run -v ${WORKSPACE}:/src image sh -c "ls -lah"'
 
             }
         }
