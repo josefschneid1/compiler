@@ -24,4 +24,10 @@ RUN echo \
 
 # Update package list and install Docker
 RUN apt-get update && apt-get install -y docker-ce-cli 
+RUN groupadd docker
+# Add Jenkins user to the Docker group
+RUN usermod -aG docker jenkins
+
+USER jenkins
+
 
