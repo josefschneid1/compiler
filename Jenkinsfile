@@ -16,7 +16,7 @@ pipeline {
         stage('Build Application') {
             steps
             {
-             sh 'docker run -v .:/src image sh -c "conan build ."'
+             sh 'docker run -v ${WORKSPACE}/Compiler:/src image sh -c "conan build ."'
 
             }
         }
