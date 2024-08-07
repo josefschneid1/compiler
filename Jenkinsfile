@@ -16,7 +16,7 @@ pipeline {
         stage('Build Application') {
             steps
             {
-             sh 'ls -lah'
+             sh 'ls -lah ${WORKSPACE'
              sh 'docker run -v ${WORKSPACE}:/src image sh -c "ls -lah"'
 
             }
